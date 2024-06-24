@@ -1,0 +1,10 @@
+<html>
+    {% for member in Member %}
+  <div>
+    <h4>Name: {{ member.Name }}</h4>
+      <p>Book Title: {{ member.Book_title_id}}</p>
+      <p>Date: {{ member.Date }}</p>
+  </div>
+{% endfor %}
+<a href="books/"><h4>Click here to go to home page</h4></a>
+</html>

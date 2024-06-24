@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books List</title>
+    <style>
+        /* Add some basic styling for the card */
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Books List</h1>
+    {% for book in  allimage %}
+        <div class="card">
+            <img src="{{ book.Image.url }}" alt="{{ book.Title }}">
+            <h2>{{ book.Title }}</h2>
+            <p>Author: {{ book.author }}</p>
+            
+            <p>Quantity: {{ book.Quantity }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
